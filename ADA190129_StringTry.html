@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> Min, Max, Avg </title>
+	<script>
+		
+		var input =[1,2,4,-10];
+
+		function min(array) {
+			Array.prototype.min = function () {
+			 return Math.min.apply (null, this);
+		    };
+			
+			var minimum =Math.min.apply (null , array);
+			return minimum;
+		}
+
+		function max(array) {
+			Array.prototype.max = function () {
+				return Math.max.apply (null, this);
+		    };
+
+			var maximum =Math.max.apply (null , array);
+			return maximum;
+		}
+
+		function avg(array) {
+			var sum = 0;
+			for (var i = 0; i<array; i++) {
+				sum += array [i];
+			}
+
+			var average = sum/array.length;
+			return average;
+
+		}
+		
+		function minMaxAvg(array) {
+
+		var minimum = min(array);
+		var maximum = max(array);
+		var average = avg(array);
+		return [minimum, maximum, average];
+		 }
+
+		 console.log (minMaxAvg(input));
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

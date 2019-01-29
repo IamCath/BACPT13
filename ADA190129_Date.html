@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Date</title>
+	<script>
+		var now = new Date();
+		var year = now.getFullYear();
+		var firstClass = new Date ('Jan 14 2019 19:00:00');
+		var difference = now.getTime() - firstClass.getTime();
+		var differenceInDays = difference /(1000*60*60*24);
+		//(1000*60*60*24) minutes to second
+		var msg = Math.floor(differenceInDays) + " days since we start coding :) ";
+		document.write (msg);
+	</script>
+</head>
+<body>
+
+</body>
+</html>
