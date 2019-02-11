@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>objects</title>
+	<script>
+		function Hotel (name, rooms, booked) {
+			this.name = name;
+			this.rooms = rooms;
+			this.booked = booked;
+			this.checkAvailibility = function () {
+				return this.rooms - this.booked;
+				// in Console, to call it out is QuayHotel.CheckAvalibility() 
+			}
+		}
+
+		var quayHotel = new Hotel ("Quay" , 40, 30);
+		var parkHotel = new Hotel ("Park" , 120, 77);
+	
+	console.log (quayHotel);
+	console.log (parkHotel);
+	
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>objects</title>
+	<script>
+	var hotel = {
+		name:"Quay",
+		rooms: 40,
+		booked: 10,
+		CheckAvailibility: function () {
+			return this.rooms - this.booked;
+		}
+	}
+	console.log (hotel);
+	console.log (hotel.name);
+	//console.log [hotel.name]//
+	console.log (hotel.CheckAvailibility());
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
