@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>ADA190218_DOM Manipulation_ToDoList</title>
+</head>
+<body>
+	<h1>My To Do List</h1>
+	<label for = "item"> Enter a new item: </label>
+	<input type="text" name="Item" id="item">
+	<button onclick = "addItem()"> Add item </button>
+
+	<ul id = "list"></ul>
+
+	<script>
+		function addItem() {
+			var itemName = document.getElementById("item").value;
+			//if no .value then it is calling the box only , with .value then it is calling the value in the box
+			var list = document.getElementById("list");
+
+			var node = document.createElement("li");
+			node.innerHTML = itemName + "<button>delete</button>";
+			list.appendChild(node);
+		}
+	</script>
+
+</body>
+</html>

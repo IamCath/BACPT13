@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>ADA190218_Mouse Event Listener</title>
+	<!-- 3 methods for Mouse Event -->
+	
+</head>
+<body>
+	<img id="image" src = "vsq.jpg" onclick = "mouseClick()" onmouseout="mouseOut()" >
+	<!-- one of the method -->
+
+	<script>
+		var img = document.getElementById("image");
+		img.onmouseover = mouseover; // One of the method
+		img.addEventListener('dblclick',doubleClick, false); //One of the method - this can add parameters
+
+		function mouseClick() {
+			console.log ("mouseClick");
+		}	
+
+		function mouseover () {
+			console.log ("mouseover");
+		}
+
+		function doubleClick () {
+			console.log ("doubleClick");
+		}
+
+		function mouseOut() {
+			console.log ("mouseOut");
+		}
+
+	</script>
+
+</body>
+</html>
