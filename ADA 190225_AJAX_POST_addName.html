@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>AJAX POST_addName</title>
+	<script src= "https://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+<body>
+	<input type="text" id="id" placeholder="ID"><br>
+	<input type="text" id="name" placeholder="NAME"><br>
+	<input type="text" id="phone" placeholder="PHONE"><br>
+	<input type="email" id="email" placeholder="E-MAIL"><br>
+	<!-- use type "email" , as in phone it will give @ -->
+
+	<button onclick="sendData()">POST</button>
+
+	<script>
+		function sendData() {
+		var data = {"data":[{
+			"id" : $("#id").val(),
+			"name" :$("#name").val(),
+			"phone" : $("#phone").val(),
+			"email" : $("#email").val()
+		}]};
+
+		$.post("https://sheetdb.io/api/v1/hhw9fbmvcvyuu",data,
+			function(result, status) {
+				console.log("Result: " +result+"\nStatus: "+status);
+			})
+	}
+	</script>
+<!-- open this in browser, then only the data will be added in -->
+
+</body>
+</html>

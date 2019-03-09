@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AJAX_Get</title>
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<!--if download or use the link method -->
+
+</head>
+<body>
+	<script>
+		$(document).ready(function() {
+			$.ajax({url:"https://randomuser.me/api/",
+				success: function(result) {
+					document.write(JSON.stringify(result));
+				}
+			});
+		});
+
+	</script>
+
+
+</body>
+</html>

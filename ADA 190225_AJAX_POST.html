@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>AJAX POST</title>
+	<script src= "https://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+<body>
+
+	<script>
+		var data = {"data":[{
+			"id" : "4",
+			"name" :"Isabella Reyes",
+			"phone" : "(507)-436-5130",
+			"email" : "isabelleReyes@example.com"
+		}]};
+
+		$.post("https://sheetdb.io/api/v1/hhw9fbmvcvyuu",data,
+			function(result, status) {
+				console.log("Result: " +result+"\nStatus: "+status);
+			})
+	</script>
+<!-- open this in browser, then only the data will be added in -->
+
+</body>
+</html>

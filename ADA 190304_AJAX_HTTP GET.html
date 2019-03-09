@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>AJAX_HTTP Get</title>
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<!--if download or use the link method -->
+	<style>
+		table { 
+			border-collapse: collapse; 
+		}
+		table td,th {
+			border: 1px solid;
+			padding: 4px;
+		}
+	</style>
+
+</head>
+<body>
+
+	<table id = "users">
+		<tr>
+			<th>No</th>
+			<th>Name</th>
+			<th>Job</th>
+			<th>Phone</th>
+		</tr>
+	</table>
+
+	<script>
+		$(document).ready(function(){
+			$.ajax({url:"https://sheetdb.io/api/v1/hp51q1e9wniwt",
+				success: function(res) {
+					for (var i=0; i<res.length; i++){
+						var line = "<tr><td>" + res[i].No +"</td><td>"+ res[i].Name +"</td><td>" + res[i].Job +"</td><td>"+res[i].Phone +"</td></tr>";
+					$("table#users").append(line);
+				}
+			}
+		});
+	});
+
+	</script>
+
+
+</body>
+</html>
