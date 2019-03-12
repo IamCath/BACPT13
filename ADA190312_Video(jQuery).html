@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Video_jQuery</title>
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+<body>
+	<!-- <iframe width="560" height="315"
+		src="(link)" frameborder="0" allow="accelerometer;autoplay" encrypted.media; gyroscope; picture-in-picture" allow fullscreen><iframe> -->
+
+	<video id="video" width="560" poster="kinaG.jpg" muted loop>
+		<source src="Valentine-Kina-Grannis-Official-Music-Video-360p.mp4" type="video/mp4">
+			your browser does not support this video.
+	</video>
+
+	<div id = "video-controls">
+		<button id ="playBtn">Play</button>
+		<button id ="pauseBtn">Pause</button>
+	</div>
+
+	<script>
+		$(document).ready(function(){
+			var playBtn = $("#playBtn");
+			playBtn.click(function(e){
+				$("#video").trigger("play");
+				});
+
+			var pauseBtn = $("#pauseBtn");
+			pauseBtn.click(function(e){
+				$("#video").trigger("pause");
+						});
+
+			console.log(e);
+				// e in function is error
+			
+		});
+	</script>
+</body>
+</html>
